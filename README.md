@@ -1,13 +1,11 @@
-# 🔥 Responsive Portfolio Website Ansel
-## [Watch it on youtube](https://youtu.be/oy8dSsK57Ps)
-### 🔥 Responsive Portfolio Website
+# HooBank
+### Modern UI/UX website using React.js & Tailwind CSS
 
-- Responsive Portfolio Website Using HTML CSS & JavaScript
-- Smooth scrolling in each section.
-- Includes a dark and light mode.
-- Developed first with the Mobile First methodology, then for desktop.
-- Compatible with all mobile devices and with a beautiful and pleasant user interface.
+Deployed in https://tailwind-landing-page-one.vercel.app/
 
-💙 Join the channel to see more videos like this. [Bedimcode](https://www.youtube.com/c/Bedimcode)
+![image](https://user-images.githubusercontent.com/116620586/232193361-4756f120-654b-4475-a660-aedda8f68037.png)
 
-![preview img](/preview.png)
+
+
+## Features: 
+- Responsive across web, ipad and mobile 
