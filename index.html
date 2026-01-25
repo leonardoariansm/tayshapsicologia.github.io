@@ -2,575 +2,371 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="taysha salome argoti narvaez, psicologa clinica, portfolio, psicoterapia, salud mental" />
-    <meta name="description" content="Bienvenido al Portfolio de Taysha Salomé Argoti Narváez. Psicóloga Clínica" />
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Favicon -->
-    <link id='favicon' rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-png">
-    <title>Portfolio | Taysha Salomé Argoti Narváez</title>
-</head>
-<body oncontextmenu="return false">
-
-<!-- navbar starts -->
-<header>
-        <a href="/" class="logo"><i class="fas fa-brain"></i> Taysha</a>
-
-        <div id="menu" class="fas fa-bars"></div>
-        <nav class="navbar">
-            <ul>
-            <li><a class="active" href="#home">Inicio</a></li>
-            <li><a href="#about">Sobre Mí</a></li>
-            <li><a href="#skills">Habilidades</a></li>
-            <li><a href="#education">Educación</a></li>
-            <li><a href="#work">Servicios</a></li>
-            <li><a href="#experience">Experiencia</a></li>
-            <li><a href="#contact">Contacto</a></li>
-            </ul>
-        </nav>
-</header>
-<!-- navbar ends -->
-
-
-<!-- hero section starts -->
-<section class="home" id="home">
-    <div id="particles-js"></div>
-
-    <div class="content">
-    <h2>¡Hola!,<br/> Soy Taysha Salomé <span>Argoti Narváez</span></h2>
-    <p>Soy <span class="typing-text"></span></p>
-    <a href="#about" class="btn"><span>Sobre Mí</span>
-      <i class="fas fa-arrow-circle-down"></i>
-    </a>
-    <div class="socials">
-        <ul class="social-icons">
-          <li><a class="linkedin" aria-label="LinkedIn" href="#" target="_blank"><i class="fab fa-linkedin"></i></a></li> 
-          <li><a class="email" aria-label="Email" href="mailto:salome.argoti27@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a></li>
-        </ul>
-      </div>
-    </div>
-<div class="image">
-    <img draggable="false" class="tilt" src="./assets/images/hero.png" alt="Taysha Salomé Argoti Narváez">
-</div>
-</section>
-<!-- hero section ends -->
-
-
-<!-- about section starts -->
-<section class="about" id="about">
-    <h2 class="heading"><i class="fas fa-user-alt"></i> Sobre <span>Mí</span></h2>
+    <meta name="description" content="Salomé Argoti - Psicóloga Psicoanalista. Acompañamiento profesional para tu bienestar emocional en Quito, Ecuador.">
+    <meta name="keywords" content="psicóloga, psicoanalista, terapia, Quito, Ecuador, salud mental">
+    <title>Salomé Argoti - Psicóloga Psicoanalista</title>
     
-    <div class="row">
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">Salomé Argoti</div>
+                
+                <div class="nav-links" id="navLinks">
+                    <a href="#inicio" class="nav-link">Inicio</a>
+                    <a href="#sobre-mi" class="nav-link">Sobre Mí</a>
+                    <a href="#servicios" class="nav-link">Servicios</a>
+                    <a href="#metodologia" class="nav-link">Metodología</a>
+                    <a href="#contacto" class="nav-link">Contacto</a>
+                </div>
 
-    <div class="image">
-        <img draggable="false" class="tilt" src="./assets/images/profile.jpg" alt="Taysha Salomé Argoti Narváez">
-    </div>
-    <div class="content">
-        <h3>Taysha Salomé Argoti Narváez</h3>
-        <span class="tag">Psicóloga Clínica</span>
-        
-        <p>Soy Psicóloga Clínica graduada con honores de la Pontificia Universidad Católica del Ecuador. Busco integrarme en un entorno laboral que me permita seguir desarrollando mis habilidades y pasión, contribuyendo significativamente a la misión de la organización. Poseo habilidades sociales y tecnológicas, y una amplia experiencia en psicoterapia con diversas poblaciones. Además, he diseñado y ejecutado charlas y talleres, y tengo una sólida experiencia en atención al cliente. Me destaco por mi resiliencia, mi motivación constante por el aprendizaje y mi compromiso con la excelencia profesional.</p>
-        
-        <div class="box-container">
-            <div class="box">
-              <p><span> email : </span> salome.argoti27@gmail.com</p>
-              <p><span> lugar : </span> Quito, Ecuador</p>
+                <button class="btn-primary desktop-only" onclick="scrollToSection('contacto')">
+                    Agenda tu Sesión
+                </button>
+
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </div>
-        
-        <div class="resumebtn">
-            <a href="CV_Argoti_Taysha_Salome.pdf" target="_blank" class="btn"><span>Currículum</span>
-                <i class="fas fa-chevron-right"></i>
-            </a>
-        </div>
+    </nav>
 
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#inicio" class="mobile-link">Inicio</a>
+        <a href="#sobre-mi" class="mobile-link">Sobre Mí</a>
+        <a href="#servicios" class="mobile-link">Servicios</a>
+        <a href="#metodologia" class="mobile-link">Metodología</a>
+        <a href="#contacto" class="mobile-link">Contacto</a>
+        <button class="btn-primary" onclick="scrollToSection('contacto')">
+            Agenda tu Sesión
+        </button>
     </div>
-    </div>
-</section>
-<!-- about section ends -->
 
-<!-- skills section starts -->
-<section class="skills" id="skills">
-
-    <h2 class="heading"><i class="fas fa-laptop-code"></i> Habilidades & <span>Capacidades</span></h2>
-
-    <div class="container">
-          <div class="row" id="skillsContainer">
-            <div class="bar">
-              <div class="info">
-                <span>Trabajo en equipo</span>
-              </div>
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <h1 class="hero-title fade-in">Salomé Argoti</h1>
+                    <h2 class="hero-subtitle fade-in-delay-1">Psicología y Psicoanálisis</h2>
+                    <p class="hero-text fade-in-delay-2">
+                        Acompañamiento profesional para tu bienestar emocional. 
+                        Un espacio seguro y confidencial para explorar, comprender y transformar.
+                    </p>
+                    <div class="hero-buttons fade-in-delay-3">
+                        <button class="btn-primary" onclick="scrollToSection('contacto')">
+                            Agenda tu Primera Sesión
+                        </button>
+                        <button class="btn-secondary" onclick="scrollToSection('sobre-mi')">
+                            Conocer Más
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-image fade-in-delay-2">
+                    <div class="image-placeholder">
+                        <span>Foto Profesional</span>
+                    </div>
+                </div>
             </div>
-            <div class="bar">
-              <div class="info">
-                <span>Comunicación Interpersonal</span>
-              </div>
+        </div>
+    </section>
+
+    <!-- Sobre Mí Section -->
+    <section id="sobre-mi" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <span>Foto Personal</span>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <h2 class="section-title">Sobre Mí</h2>
+                    <div class="title-divider"></div>
+                    <p class="about-text">
+                        Soy Salomé Argoti, psicóloga psicoanalista con más de X años de experiencia 
+                        ayudando a personas a encontrar claridad, sanación y bienestar emocional.
+                    </p>
+                    <p class="about-text">
+                        Mi enfoque se basa en el psicoanálisis, una metodología profunda que permite 
+                        explorar las raíces inconscientes de nuestros conflictos y patrones de 
+                        comportamiento, facilitando cambios duraderos y significativos.
+                    </p>
+                    
+                    <div class="credentials">
+                        <div class="credential-item">
+                            <div class="bullet"></div>
+                            <div>
+                                <h3 class="credential-title">Formación Académica</h3>
+                                <p class="credential-text">Licenciatura en Psicología - [Universidad]</p>
+                                <p class="credential-text">Especialización en Psicoanálisis - [Institución]</p>
+                            </div>
+                        </div>
+                        <div class="credential-item">
+                            <div class="bullet"></div>
+                            <div>
+                                <h3 class="credential-title">Experiencia</h3>
+                                <p class="credential-text">+X años de práctica clínica</p>
+                                <p class="credential-text">Consulta privada y online</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="bar">
-              <div class="info">
-                <span>Empatía y capacidad de escucha activa</span>
-              </div>
+        </div>
+    </section>
+
+    <!-- Servicios Section -->
+    <section id="servicios" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Servicios</h2>
+                <div class="title-divider center"></div>
+                <p class="section-description">
+                    Ofrezco un acompañamiento personalizado adaptado a tus necesidades específicas
+                </p>
             </div>
-            <div class="bar">
-              <div class="info">
-                <span>Resolución de problemas</span>
-              </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <div class="icon-inner"></div>
+                    </div>
+                    <h3 class="service-title">Terapia Individual</h3>
+                    <p class="service-description">
+                        Espacio confidencial para explorar tus pensamientos, emociones y conflictos personales.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <div class="icon-inner"></div>
+                    </div>
+                    <h3 class="service-title">Psicoanálisis</h3>
+                    <p class="service-description">
+                        Proceso profundo de autoconocimiento para comprender patrones inconscientes.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <div class="icon-inner"></div>
+                    </div>
+                    <h3 class="service-title">Terapia de Pareja</h3>
+                    <p class="service-description">
+                        Acompañamiento para mejorar la comunicación y resolver conflictos relacionales.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <div class="icon-inner"></div>
+                    </div>
+                    <h3 class="service-title">Consulta Online</h3>
+                    <p class="service-description">
+                        Sesiones virtuales con la misma calidad y confidencialidad desde donde estés.
+                    </p>
+                </div>
             </div>
-            <div class="bar">
-              <div class="info">
-                <span>Organización y responsabilidad</span>
-              </div>
+        </div>
+    </section>
+
+    <!-- Metodología Section -->
+    <section id="metodologia" class="methodology">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Mi Metodología</h2>
+                <div class="title-divider center"></div>
+                <p class="section-description">
+                    Un enfoque psicoanalítico centrado en tu proceso personal
+                </p>
             </div>
-            <div class="bar">
-              <div class="info">
-                <span>Manejo de baterías psicológicas</span>
-              </div>
+
+            <div class="methodology-grid">
+                <div class="methodology-item">
+                    <div class="step-number">01</div>
+                    <h3 class="methodology-title">Escucha Activa</h3>
+                    <p class="methodology-description">
+                        Creo un espacio seguro donde puedes expresarte libremente sin juicios.
+                    </p>
+                </div>
+
+                <div class="methodology-item">
+                    <div class="step-number">02</div>
+                    <h3 class="methodology-title">Exploración Profunda</h3>
+                    <p class="methodology-description">
+                        Trabajamos juntos para comprender las raíces de tus conflictos y patrones.
+                    </p>
+                </div>
+
+                <div class="methodology-item">
+                    <div class="step-number">03</div>
+                    <h3 class="methodology-title">Transformación</h3>
+                    <p class="methodology-description">
+                        Facilitamos cambios duraderos a través del autoconocimiento y la elaboración.
+                    </p>
+                </div>
             </div>
-            <div class="bar">
-              <div class="info">
-                <span>Evaluación, análisis e interpretación de pruebas psicométricas</span>
-              </div>
+
+            <div class="expectations-box">
+                <h3 class="expectations-title">¿Qué esperar de las sesiones?</h3>
+                <ul class="expectations-list">
+                    <li>Sesiones de 50 minutos en un ambiente confidencial y profesional</li>
+                    <li>Enfoque personalizado adaptado a tus necesidades específicas</li>
+                    <li>Proceso terapéutico respetuoso de tus tiempos y ritmos</li>
+                    <li>Acompañamiento profesional basado en ética y confidencialidad</li>
+                </ul>
             </div>
-            <div class="bar">
-              <div class="info">
-                <span>Elaboración de informes psicológicos</span>
-              </div>
+        </div>
+    </section>
+
+    <!-- Contacto Section -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contacto</h2>
+                <div class="title-divider center"></div>
+                <p class="section-description">
+                    Estoy aquí para acompañarte. Agenda tu primera sesión
+                </p>
             </div>
-            <div class="bar">
-              <div class="info">
-                <span>Herramientas de Software: Microsoft 365, Suite Google, Notion, ChatGPT, Gemini, Cap Cut, SPSS</span>
-              </div>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="contact-label">Teléfono</h3>
+                            <p class="contact-value">+593 XX XXX XXXX</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="contact-label">Email</h3>
+                            <p class="contact-value">contacto@salomeargoti.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="contact-label">Ubicación</h3>
+                            <p class="contact-value">Quito, Ecuador</p>
+                            <p class="contact-value">Consulta presencial y online</p>
+                        </div>
+                    </div>
+
+                    <div class="social-section">
+                        <h3 class="social-title">Sígueme en redes sociales</h3>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon" aria-label="Instagram">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-icon" aria-label="Facebook">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-icon" aria-label="LinkedIn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                    <rect x="2" y="9" width="4" height="12"/>
+                                    <circle cx="4" cy="4" r="2"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-container">
+                    <h3 class="form-title">Agenda tu Sesión</h3>
+                    <div class="contact-form">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Nombre Completo</label>
+                            <input type="text" id="name" class="form-input" placeholder="Tu nombre">
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" class="form-input" placeholder="tu@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Teléfono</label>
+                            <input type="tel" id="phone" class="form-input" placeholder="+593 XX XXX XXXX">
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Mensaje</label>
+                            <textarea id="message" class="form-textarea" rows="4" placeholder="Cuéntame cómo puedo ayudarte..."></textarea>
+                        </div>
+                        <button class="btn-primary btn-full" onclick="handleSubmit()">
+                            Enviar Mensaje
+                        </button>
+                    </div>
+                </div>
             </div>
-          </div>
-</div>
-</section>
-<!-- skills section ends -->
-
-<!-- education section starts -->
-<section class="education" id="education">
-
-  <h2 class="heading"><i class="fas fa-graduation-cap"></i> Educación </h2>
-
-  <div class="timeline">
-
-    <div class="container right">
-      <div class="content">
-        <div class="tag">
-          <h2>Senior Year</h2>
         </div>
-        <div class="desc">
-            <h3>Inspire School of Arts and Sciences | Chico-California</h3>
-            <p>2016 - 2017</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Salomé Argoti</div>
+                <p class="footer-subtitle">Psicología y Psicoanálisis</p>
+                <div class="footer-links">
+                    <a href="#" class="footer-link">Instagram</a>
+                    <a href="#" class="footer-link">Facebook</a>
+                    <a href="#" class="footer-link">LinkedIn</a>
+                </div>
+                <div class="footer-bottom">
+                    <p class="footer-text">© 2024 Salomé Argoti. Todos los derechos reservados.</p>
+                    <p class="footer-text">Consultas confidenciales | Registro profesional: XXXX</p>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
+    </footer>
 
-    <div class="container left">
-      <div class="content">
-        <div class="tag">
-          <h2>Psicóloga Clínica</h2>
-        </div>
-        <div class="desc">
-            <h3>Pontificia Universidad Católica del Ecuador | Quito-Ecuador</h3>
-            <p>2018 - 2024</p>
-        </div>
-      </div>
-    </div>
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/593XXXXXXXXX" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+        </svg>
+    </a>
 
-    <div class="container right">
-      <div class="content">
-        <div class="tag">
-          <h2>Diplomado Internacional en manejo psicológico del duelo y tanatología</h2>
-        </div>
-        <div class="desc">
-            <h3>Grupo Impulsar | Ecuador</h3>
-            <p>2024 - 2024</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="container left">
-      <div class="content">
-        <div class="tag">
-          <h2>Diplomado Internacional en Psicología Oncológica</h2>
-        </div>
-        <div class="desc">
-            <h3>Instituto Latinoamericano de Estudios de Posgrado | México</h3>
-            <p>2024 - 2024</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="container right">
-      <div class="content">
-        <div class="tag">
-          <h2>Diplomado Internacional en Trastornos del neurodesarrollo y neurodegenerativos en el proceso vital</h2>
-        </div>
-        <div class="desc">
-            <h3>Orgaepsi | Ecuador</h3>
-            <p>2024 - 2025</p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="morebtn">
-    <a href="#experience" class="btn"><span>Ver Experiencia</span>
-      <i class="fas fa-arrow-right"></i>
-  </a>
-  </div>
-
-</section>
-<!-- education section ends -->
-
-<!-- work section starts -->
-<section class="work" id="work">
-
-  <h2 class="heading"><i class="fas fa-briefcase"></i> Servicios </h2>
-
-  <div class="box-container">
-
-    <div class="box tilt">
-      <img draggable="false" src="./assets/images/services/terapia_individual.jpg" alt="" />
-      <div class="content">
-        <div class="tag">
-        <h3>Terapia Individual</h3>
-        </div>
-        <div class="desc">
-          <p>Procesos de psicoterapia individual para adolescentes, adultos y adultos mayores.</p>
-          <div class="btns">
-            <a href="#" class="btn" target="_blank"><i class="fas fa-eye"></i> Ver Más</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="box tilt">
-      <img draggable="false" src="./assets/images/services/terapia_pareja.jpg" alt="" />
-      <div class="content">
-        <div class="tag">
-        <h3>Terapia de Pareja</h3>
-        </div>
-        <div class="desc">
-          <p>Abordaje de conflictos de pareja y mejora de la comunicación.</p>
-          <div class="btns">
-            <a href="#" class="btn" target="_blank"><i class="fas fa-eye"></i> Ver Más</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="box tilt">
-      <img draggable="false" src="./assets/images/services/terapia_familiar.jpg" alt="" />
-      <div class="content">
-        <div class="tag">
-        <h3>Terapia Familiar</h3>
-        </div>
-        <div class="desc">
-          <p>Psicoterapia grupal familiar para resolver dinámicas y conflictos.</p>
-          <div class="btns">
-            <a href="#" class="btn" target="_blank"><i class="fas fa-eye"></i> Ver Más</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="box tilt">
-      <img draggable="false" src="./assets/images/services/manejo_ansiedad.jpg" alt="" />
-      <div class="content">
-        <div class="tag">
-        <h3>Manejo de Ansiedad y Depresión</h3>
-        </div>
-        <div class="desc">
-          <p>Herramientas para el manejo emocional y prevención del burnout.</p>
-          <div class="btns">
-            <a href="#" class="btn" target="_blank"><i class="fas fa-eye"></i> Ver Más</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="box tilt">
-      <img draggable="false" src="./assets/images/services/autoestima.jpg" alt="" />
-      <div class="content">
-        <div class="tag">
-        <h3>Autoestima y Crecimiento Personal</h3>
-        </div>
-        <div class="desc">
-          <p>Programas de estimulación cognitiva y crecimiento personal.</p>
-          <div class="btns">
-            <a href="#" class="btn" target="_blank"><i class="fas fa-eye"></i> Ver Más</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="box tilt">
-      <img draggable="false" src="./assets/images/services/duelo.jpg" alt="" />
-      <div class="content">
-        <div class="tag">
-        <h3>Duelo y Pérdidas</h3>
-        </div>
-        <div class="desc">
-          <p>Apoyo en procesos de duelo y tanatología.</p>
-          <div class="btns">
-            <a href="#" class="btn" target="_blank"><i class="fas fa-eye"></i> Ver Más</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-<div class="viewall">
-  <a href="#" class="btn"><span>Ver Todos</span>
-    <i class="fas fa-arrow-right"></i>
-</a>
-</div>
-
-</section>
-<!-- work section ends -->
-
-<!-- experience section starts -->
-<section class="experience" id="experience">
-
-  <h2 class="heading"><i class="fas fa-briefcase"></i> Experiencia </h2>
-
-  <div class="timeline">
-
-    <div class="container right">
-      <div class="content">
-        <div class="tag">
-          <h2>Psicóloga Clínica</h2>
-        </div>
-        <div class="desc">
-            <h3>Centro de Psicología aplicada ‘PUCE’ | Quito</h3>
-            <p>2022</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="container left">
-      <div class="content">
-        <div class="tag">
-          <h2>Psicoterapeuta y Tallerista</h2>
-        </div>
-        <div class="desc">
-            <h3>Clinica de Bienestar Mental Terralegre | Quito</h3>
-            <p>2022</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="container right">
-      <div class="content">
-        <div class="tag">
-          <h2>Instructora de talleres y capacitadora</h2>
-        </div>
-        <div class="desc">
-            <h3>Agencia Metropolitana de Tránsito - AMT</h3>
-            <p>2022</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="container left">
-      <div class="content">
-        <div class="tag">
-          <h2>Instructora de Talleres</h2>
-        </div>
-        <div class="desc">
-            <h3>Municipio de Quito</h3>
-            <p>2022</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="container right">
-      <div class="content">
-        <div class="tag">
-          <h2>Psicóloga Clínica</h2>
-        </div>
-        <div class="desc">
-            <h3>Médical & Care</h3>
-            <p>2024 - Presente</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="container left">
-      <div class="content">
-        <div class="tag">
-          <h2>Responsable de atención al cliente</h2>
-        </div>
-        <div class="desc">
-            <h3>Big Horse - Tulcán</h3>
-            <p>2022</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="container right">
-      <div class="content">
-        <div class="tag">
-          <h2>Responsable de atención al cliente</h2>
-        </div>
-        <div class="desc">
-            <h3>Medias Don Marcos - Tulcán</h3>
-            <p>2022</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="container left">
-      <div class="content">
-        <div class="tag">
-          <h2>Asesor de ventas</h2>
-        </div>
-        <div class="desc">
-            <h3>Victoria’s Secret - Quito</h3>
-            <p>2023</p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="morebtn">
-    <a href="#contact" class="btn"><span>Contacto</span>
-      <i class="fas fa-arrow-right"></i>
-  </a>
-  </div>
-
-</section>
-<!-- experience section ends -->
-
-<!-- contact section starts -->
-<section class="contact" id="contact">
-  
-  <h2 class="heading"><i class="fas fa-headset"></i> Ponte en <span>Contacto</span></h2>
-
-  <div class="container">
-    <div class="content">
-      <div class="image-box">
-        <img draggable="false" src="./assets/images/contact1.png" alt="">
-      </div>
-    <form id="contact-form">
-      
-      <div class="form-group">
-        <div class="field">
-          <input type="text" name="name" placeholder="Nombre" required>
-          <i class='fas fa-user'></i>
-        </div>
-        <div class="field">
-          <input type="text" name="email" placeholder="Email" required>
-          <i class='fas fa-envelope'></i>
-        </div>
-        <div class="field">
-          <input type="text" name="phone" placeholder="Teléfono">
-          <i class='fas fa-phone-alt'></i>
-        </div>
-        <div class="message">
-        <textarea placeholder="Mensaje" name="message" required></textarea>
-        <i class="fas fa-comment-dots"></i>
-        </div>
-        </div>
-      <div class="button-area">
-        <button type="submit">
-          Enviar <i class="fa fa-paper-plane"></i></button>
-      </div>
-    </form>
-  </div>
-  </div>
-</section>
-<!-- contact section ends -->
-
-
-<!-- footer section starts -->
-<section class="footer">
-
-  <div class="box-container">
-
-      <div class="box">
-          <h3>Portfolio de Taysha</h3>
-          <p>Gracias por visitar mi portfolio personal. Conéctate conmigo por redes sociales. <br/> <br/> ¡Sigue creciendo 🚀!</p>
-      </div>
-
-      <div class="box">
-          <h3>enlaces rápidos</h3>
-          <a href="#home"><i class="fas fa-chevron-circle-right"></i> inicio</a>
-          <a href="#about"><i class="fas fa-chevron-circle-right"></i> sobre mí</a>
-          <a href="#skills"><i class="fas fa-chevron-circle-right"></i> habilidades</a>
-          <a href="#education"><i class="fas fa-chevron-circle-right"></i> educación</a>
-          <a href="#work"><i class="fas fa-chevron-circle-right"></i> servicios</a>
-          <a href="#experience"><i class="fas fa-chevron-circle-right"></i> experiencia</a>
-      </div>
-
-      <div class="box">
-          <h3>información de contacto</h3>
-          <p> <i class="fas fa-phone"></i> (+593) 995566047</p>
-          <p> <i class="fas fa-envelope"></i> salome.argoti27@gmail.com</p>
-          <p> <i class="fas fa-map-marked-alt"></i> Quito, Ecuador</p>
-          <div class="share">
-
-              <a href="#" class="fab fa-linkedin" aria-label="LinkedIn" target="_blank"></a>
-              <a href="mailto:salome.argoti27@gmail.com" class="fas fa-envelope" aria-label="Mail" target="_blank"></a>
-          </div>
-      </div>
-  </div>
-
-  <h1 class="credit">Diseñado con <i class="fa fa-heart pulse"></i> por <a href="#"> Taysha Salomé Argoti Narváez</a></h1>
-
-</section>
-<!-- footer section ends -->
-
-
-<!-- scroll top btn -->
-<a href="#home" aria-label="ScrollTop" class="fas fa-angle-up" id="scroll-top"></a>
-<!-- scroll back to top -->
-
-
-<!-- ==== ALL MAJOR JAVASCRIPT CDNS STARTS ==== -->
-<!-- jquery cdn -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-<!-- typed.js cdn -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js" integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-<!-- particle.js links -->
-<script src="./assets/js/particles.min.js"></script>
-<script src="./assets/js/app.js"></script>
-
-<!-- vanilla tilt.js links -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-<!-- scroll reveal anim -->
-<script src="https://unpkg.com/scrollreveal"></script>
-
-<script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
-    ></script>
-
-<!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
-
-<script src="./assets/js/script.js"></script>
-
-<!-- Adapt typing text -->
-<script>
-var typed = new Typed(".typing-text", {
-    strings: ["Psicóloga Clínica", "Terapeuta", "Tallerista", "Investigadora"],
-    loop: true,
-    typeSpeed: 50,
-	backSpeed: 25,
-	backDelay: 500,
-});
-</script>
-
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="assets/js/particles.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
