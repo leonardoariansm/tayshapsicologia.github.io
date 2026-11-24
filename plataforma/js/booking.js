@@ -24,17 +24,19 @@ export function renderBooking(root) {
   const steps = ['Servicio', 'Fecha y hora', 'Tus datos', 'Confirmar'];
   const svc = services.find((s) => s.id === B.svc);
 
-  const head = `<div class="pub-top"><a href="../index.html" class="brand" style="padding:0;text-decoration:none;color:inherit"><div class="brand-mark">S</div><div><b>${esc(P.short)}</b><span>${esc(P.title)}</span></div></a><a class="btn ghost sm" href="#/inicio">${icon('lock')} Acceso profesional</a></div>`;
+  const head = `<div class="pub-top"><a href="#/" class="brand" style="padding:0;text-decoration:none;color:inherit"><div class="brand-mark" style="color:#fff">S</div><div><b>${esc(P.short)}</b><span>${esc(P.title)}</span></div></a><div class="row"><a class="btn ghost sm" href="#/">Volver al juego</a><a class="btn sm" href="#/inicio">${icon('lock')} Acceso profesional</a></div></div>`;
   const hero = `<section class="pub-hero"><div><span class="pill brand">Agenda en línea</span><h1 style="margin-top:12px">Reserva tu sesión con ${esc(P.short)}</h1><p>${esc(P.tagline || P.bio)}</p>
       <div class="row" style="margin-top:16px">${(P.specialties || []).slice(0, 4).map((s) => `<span class="pill">${esc(s)}</span>`).join('')}</div>
-      <p class="small muted" style="margin-top:14px">${esc(P.city)} · Presencial y en línea · ${esc(P.approach || '')}</p></div>
-    <img src="salome-retrato.jpg" alt="${esc(P.short)}" onerror="this.style.display='none'"></section>`;
+      <p class="small muted" style="margin-top:14px">${esc(P.city)} · Presencial y en línea · ${esc(P.approach || '')}</p>
+      <div class="row" style="margin-top:18px"><button class="btn primary lg" data-start>Agendar una sesión</button><a class="btn lg" href="#/">Explorar cómo me siento</a></div></div>
+    <div class="hero-img"><img src="salome-retrato.jpg" alt="${esc(P.short)}" onerror="this.style.display='none'">
+      <span class="float-chip" style="left:-14%;top:14%">Ansiedad</span><span class="float-chip" style="right:-10%;top:30%;animation-delay:-2s">Duelo</span><span class="float-chip" style="left:-6%;bottom:22%;animation-delay:-4s">Estrés laboral</span><span class="float-chip" style="right:-4%;bottom:8%;animation-delay:-1s">Psicooncología</span></div></section>`;
 
   let body = '';
   if (!live) {
     body = `<div class="card"><h2>La agenda en línea se está configurando</h2><p class="muted" style="margin-top:8px">Mientras tanto, puedes escribir directamente para agendar.</p><div class="row" style="margin-top:14px"><a class="btn primary" target="_blank" rel="noopener" href="${waLink(P.phone, 'Hola, quisiera agendar una sesión.')}">${icon('wa')} Escribir por WhatsApp</a><a class="btn" href="mailto:${esc(P.email)}">Enviar correo</a></div></div>`;
   } else if (B.step === 0) {
-    body = `<h2 style="margin-bottom:12px">¿Qué tipo de sesión necesitas?</h2><div class="svc-grid">${services.map((s) => `<button class="svc ${B.svc === s.id ? 'on' : ''}" data-svc="${s.id}"><b>${esc(s.name)}</b><span class="small" style="color:var(--ink-2)">${esc(s.desc)}</span><span class="meta"><span>${s.minutes} min</span><span>·</span><span>${money(s.price, cur)}</span><span>·</span><span>${s.modalities.map((m) => (m === 'online' ? 'En línea' : 'Presencial')).join(' o ')}</span></span></button>`).join('')}</div>
+    body = `<h2 style="margin-bottom:12px">¿Qué tipo de sesión necesitas?</h2><div class="svc-grid">${services.map((s, i) => `<button class="svc ${B.svc === s.id ? 'on' : ''}" data-svc="${s.id}"><span class="row" style="flex-wrap:nowrap"><span class="gicon sm ${['g-sun', 'g-sky', 'g-rose', 'g-ember', 'g-sea', 'g-sage'][i % 6]}">${icon(['heart', 'users', 'moon', 'sun', 'note', 'chart'][i % 6])}</span><b>${esc(s.name)}</b></span><span class="small" style="color:var(--ink-2)">${esc(s.desc)}</span><span class="meta"><span>${s.minutes} min</span><span>·</span><span>${money(s.price, cur)}</span><span>·</span><span>${s.modalities.map((m) => (m === 'online' ? 'En línea' : 'Presencial')).join(' o ')}</span></span></button>`).join('')}</div>
       <p class="small muted" style="margin-top:12px">¿Primera vez? Elige <b>Primera consulta</b>: en ella acordamos juntas los objetivos y la frecuencia.</p>`;
   } else if (B.step === 1) {
     const today = new Date(); today.setHours(0, 0, 0, 0);
@@ -113,6 +115,7 @@ function bind(root, pub, svc, services) {
   $$('[data-mod]', root).forEach((b) => b.onclick = () => { B.modality = b.dataset.mod; r(); });
   $$('[data-m]', root).forEach((b) => b.onclick = () => { B.month = Math.max(0, B.month + +b.dataset.m); r(); });
   const back = $('[data-back]', root); back && (back.onclick = () => { if (B.step === 2) B.data = { ...B.data, ...formData($('#bf')) }; B.step--; r(); scrollTo(0, 0); });
+  const st = $('[data-start]', root); st && (st.onclick = () => $('.steps', root)?.scrollIntoView({ behavior: 'smooth' }));
   const again = $('[data-again]', root); again && (again.onclick = () => { reset(); r(); });
   const ics = $('[data-ics]', root); ics && (ics.onclick = () => download('mi-sesion.ics', icsFor({ title: `Sesión con ${pub.profile.short} (por confirmar)`, start: new Date(`${B.date}T${B.time}`).toISOString(), minutes: svc.minutes, location: B.modality === 'online' ? 'En línea' : pub.profile.address }), 'text/calendar'));
   const next = $('[data-next]', root);

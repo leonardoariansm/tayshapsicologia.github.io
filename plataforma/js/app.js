@@ -6,6 +6,7 @@ import { SCALES, score, trajectory, STATUS_LABEL, CGI, CRISIS, NORMATIVA, CONSEN
 import { baseConfig, demoData } from './seed.js';
 import { icon, avatar, statusPill, riskPill, pStatusPill, STATUS, RISK, PSTATUS, toast, modal, confirmDialog, formData, lineChart, barChart } from './ui.js';
 import { renderBooking } from './booking.js';
+import { renderLanding } from './landing.js';
 
 const root = document.getElementById('root');
 const db = () => Store.db;
@@ -28,12 +29,13 @@ const RISK_LV = { sin_riesgo: 'Sin indicadores de riesgo', bajo: 'Riesgo bajo', 
 // Ruteo
 // ---------------------------------------------------------------------
 const NAV = [
-  ['inicio', 'Inicio', 'home'], ['agenda', 'Agenda', 'cal'], ['pacientes', 'Pacientes', 'users'], ['finanzas', 'Cobros', 'coin'], ['trazabilidad', 'Trazabilidad', 'shield'], ['ajustes', 'Ajustes', 'gear'],
+  ['inicio', 'Inicio', 'home', 'g-sun'], ['agenda', 'Agenda', 'cal', 'g-sky'], ['pacientes', 'Pacientes', 'users', 'g-rose'], ['finanzas', 'Cobros', 'coin', 'g-sage'], ['trazabilidad', 'Trazabilidad', 'shield', 'g-sea'], ['ajustes', 'Ajustes', 'gear', 'g-ink'],
 ];
 let state = { week: startOfWeek(new Date()), view: 'week', day: new Date(), q: '', pf: 'todos', tab: 'resumen' };
 
 function route() {
-  const h = location.hash.replace(/^#\/?/, '') || 'inicio';
+  const h = location.hash.replace(/^#\/?/, '');
+  if (!h) return renderLanding(root);
   const [name, ...rest] = h.split('/');
   if (name === 'reservar') { document.body.dataset.mode = 'public'; return renderBooking(root); }
   document.body.dataset.mode = 'panel';
@@ -70,13 +72,13 @@ function renderLock() {
   root.innerHTML = `<div class="lock">
     <div class="lock-art">
       <div class="orb" style="width:520px;height:520px;right:-180px;top:-160px"></div><div class="orb" style="width:300px;height:300px;left:-120px;bottom:-120px"></div>
-      <div class="brand" style="padding:0"><div class="brand-mark" style="background:#F2D6B8;color:#0B4A45">S</div><div><b style="color:#fff">Salito</b><span style="color:#cfe7e2">Consulta de Salomé Argoti</span></div></div>
+      <div class="brand" style="padding:0"><div class="brand-mark" style="color:#fff">S</div><div><b>Salito</b><span style="color:#47504F">Consulta de Salomé Argoti</span></div></div>
       <div>
         <h1>Tu consulta, en orden y en confianza.</h1>
         <p>Agenda, historia clínica, escalas de resultado y trazabilidad en un solo lugar. La información clínica se guarda cifrada en este dispositivo y solo se abre con tu PIN.</p>
         <ul><li>Reservas en línea sin exponer datos de pacientes</li><li>Historia clínica con notas firmadas y adendas</li><li>PHQ-9, GAD-7 y WHO-5 con cambio clínicamente fiable</li><li>Registro de auditoría encadenado e imposible de alterar sin que se note</li></ul>
       </div>
-      <a href="#/reservar" style="color:#F2D6B8">Ver la página pública de reservas →</a>
+      <div class="row"><a class="btn sm" href="#/">Ver la landing</a><a class="btn sm" href="#/reservar">Página de reservas</a></div>
     </div>
     <div class="lock-form"><form class="lock-box" id="lockf" autocomplete="off">
       ${has ? `<h2>Entrar a la consulta</h2><p class="muted">Escribe tu PIN para descifrar la información.</p>
@@ -133,7 +135,7 @@ function shell(active, html) {
   const p = db().profile;
   root.innerHTML = `<div class="app">
     <aside class="side"><div class="brand"><div class="brand-mark">S</div><div><b>Salito</b><span>${esc(p.short)}</span></div></div>
-      <nav class="nav">${NAV.map(([k, l, ic]) => `<a href="#/${k}" class="${active === k ? 'on' : ''}">${icon(ic)}${l}${k === 'agenda' && pc ? `<span class="count">${pc}</span>` : ''}</a>`).join('')}</nav>
+      <nav class="nav">${NAV.map(([k, l, ic, g]) => `<a href="#/${k}" class="${active === k ? 'on' : ''}"><span class="gicon sm ${g}">${icon(ic)}</span>${l}${k === 'agenda' && pc ? `<span class="count">${pc}</span>` : ''}</a>`).join('')}</nav>
       <div class="side-foot"><a class="btn ghost sm" href="#/reservar" target="_blank" rel="noopener">${icon('link')} Página de reservas</a>
       <div class="row"><button class="btn ghost sm" id="theme" aria-label="Cambiar tema">${icon('moon')}</button><button class="btn ghost sm" id="logout">${icon('out')} Cerrar sesión</button></div></div></aside>
     <header class="topbar"><div class="brand" style="padding:0"><div class="brand-mark" style="width:30px;height:30px;font-size:16px">S</div><b>Salito</b></div><div class="row"><button class="btn ghost sm" id="theme2" aria-label="Cambiar tema">${icon('moon')}</button><button class="btn ghost sm" id="logout2" aria-label="Cerrar sesión">${icon('out')}</button></div></header>
